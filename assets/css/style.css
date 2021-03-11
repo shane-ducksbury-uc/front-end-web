@@ -1,0 +1,22 @@
+header {
+    background-color: cyan;
+}
+
+.hero {
+    background-color: blue;
+    height: 500px;
+}
+
+.front-content-box {
+    background-color: blueviolet;
+    min-height: 350px;
+}
+
+footer {
+    min-height: 100px;
+    background-color: cornflowerblue;
+}
+
+h2 {
+    font-size: 2rem;
+}
