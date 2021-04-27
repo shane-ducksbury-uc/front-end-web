@@ -9,7 +9,6 @@ body {
 }
 
 header {
-    /* background-color: #273554; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,16 +17,16 @@ header {
     margin: 0 auto;
 }
 
-#logo > a {
-    font-size: 4vw;
-}
-
 header a, a:link, a:visited {
     text-decoration: none;
     font-size: 1.3rem;
     margin-right: 20px;
     position: relative;
     color: inherit;
+}
+
+.logo > a {
+    font-size: 3rem;
 }
 
 nav {
@@ -63,6 +62,12 @@ nav a:hover::before {
 nav a:visited {
     color: inherit;
 }
+
+/* Hidden hamburger on large width */
+.mobile-hamburger-wrapper {
+    display: none;
+}
+
 
 main {
     width: 80%;
@@ -144,8 +149,25 @@ li {
 }
 
 footer {
-    min-height: 100px;
-    background-color: cornflowerblue;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: radial-gradient( circle farthest-corner at -4% -12.9%,  rgba(74,98,110,1) 0.3%, rgba(30,33,48,1) 90.2% );
+    /* margin-top: 2rem; */
+    text-align: center;
+}
+
+footer p {
+    color: #FFF;
+    max-width: unset;
+    font-size: 1rem;
+}
+
+footer > .logo > a {
+    color: #FFF;
+    font-size: 1.5rem;
 }
 
 .article-hero {
@@ -200,7 +222,7 @@ footer {
     text-align: center;
 }
 
-/* Style the tab */
+/* Style the tabs at the top of content */
 .tab {
     margin: 0 auto;
     margin-bottom: 2rem;
@@ -221,6 +243,7 @@ footer {
     font-weight: 300;
     outline: none;
     position: relative;
+    z-index: -1;
     transition: 0.3s;
     padding: 10px;
     cursor: pointer;
@@ -251,18 +274,237 @@ footer {
     max-width: 80%;
     margin: 0 auto;
     padding: 6px 12px;
-    /* border: 1px solid #ccc; */
     border-top: none;
   }
 
-@media screen and (max-width:1000px){
+@media screen and (max-width: 1500px){
+    main {
+        width: 100%;
+    }
+
     #architect-hero {
-        background-image: linear-gradient(to left, #000000 20%, rgb(255,255,255,0)),url("../img/extra2-robin boyd portrait-copyright-Mark-Strizic.jpg");
+        background-color: rgb(221, 221, 221);
+        background-image: linear-gradient(to top, #000000 10%, rgb(255,255,255,0)),url("../img/extra2-robin boyd portrait-copyright-Mark-Strizic.jpg");
+        /* background-position: -80% 0px; */
+    }
+    #history-hero {
+        background-image: linear-gradient(to top, #000000 5%, rgb(255,255,255,0)),url("../img/churchill-house-12.jpg");
+        /* background-position: -100% 0px; */
+    }
+    
+}
+
+
+@media screen and (max-width:1000px){
+    header {
+        justify-content: space-between;
+    }
+
+    header a, a:link, a:visited {
+        font-size: 1rem;
+    }
+
+    /* Don't get the nav on the front page. Working in reverse of what I'm expecting for some reason */
+    nav:is(.landing-nav) {
+        display: none;
+    }
+
+    /* CSS Only Hamburger menu adapted from Brad at Traversey Media https://www.youtube.com/watch?v=DZg6UfS5zYg */
+
+    .mobile-hamburger-wrapper {
+        display: unset;
+        padding-right: 3rem;
+        padding-bottom: 4.5rem;
+    }
+
+    .mobile-hamburger-wrapper .toggler {
+        position: absolute;
+        z-index: 2;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        opacity: 0;
+    }
+
+    .mobile-hamburger-wrapper .hamburger {
+        position: absolute;
+        z-index: 1;
+        width: 30px;
+        height: 30px;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Hamburger Line */
+    .mobile-hamburger-wrapper .hamburger > div {
+        position: relative;
+        width: 100%;
+        height: 2px;
+        background-color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+
+    .mobile-hamburger-wrapper .hamburger > div::before, .mobile-hamburger-wrapper .hamburger > div::after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        top: -10px;
+        width: 100%;
+        height: 2px;
+        background: inherit;
+    }
+
+    .mobile-hamburger-wrapper .hamburger > div:after {
+        top: 10px;
+    }
+
+    /* Animate the hamburger line */
+    .mobile-hamburger-wrapper .toggler:checked + .hamburger > div {
+        transform: rotate(135deg);
+    }
+
+    /* Turns the hamburger line into an X by moving the before/after lines */
+    .mobile-hamburger-wrapper .toggler:checked + .hamburger > div:before, .mobile-hamburger-wrapper .toggler:checked + .hamburger > div:after {
+        top: 0;
+        transform: rotate(90deg)
+    }
+
+    /* All of the settings for when the button is pressed */
+    .mobile-hamburger-wrapper .toggler:checked ~ .menu {
+        visibility: visible;
+    }
+
+    .mobile-hamburger-wrapper .toggler:checked ~ .menu  > div > div {
+        opacity: 1;
+        transition: opacity 0.4s;
+    }
+
+    /* Move the X with the page */
+
+    .mobile-hamburger-wrapper .toggler:checked {
+        position: fixed;
+    }
+
+    .mobile-hamburger-wrapper .toggler:checked ~ .hamburger {
+        position: fixed;
+    }
+
+    /* Display settings for the menu */
+    .mobile-hamburger-wrapper .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobile-hamburger-wrapper .menu > div {
+        background-color: rgba(255, 255, 255, 0.97);
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+          /* This is the transition where it is to scale from 0 to 1 */
+        transition: all 0.4s ease;
+    }
+
+    .mobile-hamburger-wrapper .menu > div > div {
+        text-align: right;
+        max-width: 90vh;
+        max-height: 100vh;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+    }
+
+    .mobile-hamburger-wrapper .menu > div > div > ul > li {
+        list-style: none;
+        font-size: 1.5rem;
+        padding: 3rem;
+    }
+
+    .mobile-hamburger-wrapper .menu > div > div > ul > li > a {
+        font-size: 2.0rem;
+        transition: all 0.4s ease;
+    }
+
+
+    main {
+        width: 100%;
+    }
+
+    .article-hero {
+        height: 50vh;
+        min-width: 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-color: black;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin-bottom: 2rem;
+        /* background-attachment: fixed; */
+    }
+
+    .article-hero > h1 {
+        font-size: 3rem;
+    }
+
+    #architect-hero {
+        background-image: linear-gradient(to top, #000000 10%, rgb(255,255,255,0)),url("../img/extra2-robin boyd portrait-copyright-Mark-Strizic.jpg");
+        background-position: unset;
+    }
+
+    #history-hero {
+        background-image: linear-gradient(to top, #000000 10%, rgb(255,255,255,0)),url("../img/churchill-house-12.jpg");
+        /* background-position: -100% 0px; */
+    }
+    
+    #design-hero {
+        background-color: rgb(230, 230, 230);
+        background-image: linear-gradient(to top, #000000 10%, rgb(255,255,255,0)),url("../img/churchill-house-4.jpg");
+        /* background-position: 0px -100%; */
     }
 }
 
-@media screen and (max-width:675px){
+@media screen and (max-width:750px){
+    .logo > a {
+        font-size: 2rem;
+        max-width: 100px;
+    }
+
+    main p {
+        margin: 0 1em;
+    }
+
+    main h1, h2, h3, h4 {
+        text-align: center;
+    }
+
     .home-hero > header {
         justify-content: center;
+    }
+
+    #architect-hero {
+        background-image: linear-gradient(to top, #000000 10%, rgb(255,255,255,0)),url("../img/extra2-robin boyd portrait-copyright-Mark-Strizic.jpg");
+    }
+}
+
+@media screen and (max-width:500px) {
+    
+
+
+    .article-hero {
+        height: 40vh;
     }
 }

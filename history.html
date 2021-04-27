@@ -10,21 +10,37 @@
 </head>
 <body>
     <header>
-        <div id="logo">
+        <div class="logo">
             <a href="index.html">Churchill House</a>
         </div>
-        <nav>
+        <nav class="landing-nav">
             <a href="design.html">Design</a>
             <a href="history.html">History</a>
             <a href="architect.html">The Architect</a>
         </nav>
+        <!-- Class is hidden unless viewport is small enough -->
+        <div class="mobile-hamburger-wrapper">
+            <input type="checkbox" class="toggler">
+            <div class="hamburger"><div></div></div>
+            <div class="menu">
+              <div>
+                <div>
+                  <ul>
+                    <li><a href="design.html">Design</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="architect.html">The Architect</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
     </header>
     <main>
         <div class="article-hero" id="history-hero">
             <h1>History</h1>
         </div>
         <article>
-            <h3>Churchill House is a good example of the Late Twentieth Century Brutalist style</h3>
+            <h3><em>Churchill House is a good example of the Late Twentieth Century Brutalist style</em></h3>
             <p>Churchill House, at 216 Northbourne Avenue in Braddon, was designed by Robin Boyd for the Winston Churchill Memorial Trust of Australia in 1969-70, and construction was completed in 1971. It was Boyd’s last major commission, and he died prior to its completion. It is one of a small number of larger designs produced by Boyd and was Canberra’s first brutalist building.</p>
             <h2>First Steps</h2>
             <p>Churchill House was built by the Winston Churchill Memorial Trust of Australia. The Trust began consideration of erecting a building of its own in 1967 and formed a building committee in 1968. In 1969 it acquired a lease for land on Northbourne Avenue, the current site, and engaged the architect Robin Boyd to design the building.</p>
@@ -47,5 +63,11 @@
             <p>Churchill House is an early example in this context, and one of only two examples of an office building. While Brutalism has been described as an ethic rather than an aesthetic (Banham 1966:10), both office buildings display a more restrained form compared to the other buildings, several of which were intended to portray a distinctive image in the national capital.</p>
         </article>
     </main>
+    <footer>
+        <div class="logo">
+            <a href="index.html">Churchill House</a>
+        </div>
+        <p>This website was produced by students in the Faculty of Arts & Design, University of Canberra, 2021.</p>
+    </footer>
 </body>
 </html>

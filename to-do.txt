@@ -1,0 +1,3 @@
+- Need to add em italics for headings
+- Need to finish off the footer
+- Add next and previous to the bottom of the articles.

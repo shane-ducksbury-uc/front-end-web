@@ -9,14 +9,30 @@
 </head>
 <body>
     <header>
-        <div id="logo">
+        <div class="logo">
             <a href="index.html">Churchill House</a>
         </div>
-        <nav>
+        <nav class="landing-nav">
             <a href="design.html">Design</a>
             <a href="history.html">History</a>
             <a href="architect.html">The Architect</a>
         </nav>
+        <!-- Class is hidden unless viewport is small enough -->
+        <div class="mobile-hamburger-wrapper">
+            <input type="checkbox" class="toggler">
+            <div class="hamburger"><div></div></div>
+            <div class="menu">
+              <div>
+                <div>
+                  <ul>
+                    <li><a href="design.html">Design</a></li>
+                    <li><a href="history.html">History</a></li>
+                    <li><a href="architect.html">The Architect</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
     </header>
     <main>
         <div class="article-hero" id="architect-hero">
@@ -55,5 +71,11 @@
             <p>Boyd received the Royal Australian Institute of Architects Gold Medal in 1969 and was awarded a Commander of the Most Excellent Order of the British Empire (CBE) in 1971 for his services to architecture and government. In the same year he died suddenly from a stroke while recovering from an anaesthetic as part of treatment for an infection. As a result, his work on the Former Churchill House had to be completed by another architect, Bill Williams, who had been employed by Boyd to work on the project under the supervision of a more experienced architect, Neil Clerehan (who later designed the second storey of the north wing to replace the glass display pavilion). (Serle 1995) </p>
         </article>
     </main>
+    <footer>
+        <div class="logo">
+            <a href="index.html">Churchill House</a>
+        </div>
+        <p>This website was produced by students in the Faculty of Arts & Design, University of Canberra, 2021.</p>
+    </footer>
 </body>
 </html>
