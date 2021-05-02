@@ -40,6 +40,13 @@ header a {
     position: relative;
 }
 
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+
 /* Underline for nav underline from https://tobiasahlin.com/blog/css-trick-animating-link-underlines/ */
 nav a::before{
     content: "";
