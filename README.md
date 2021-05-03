@@ -11,6 +11,7 @@ The assignment forced me to think outside the box when it came to using code suc
 Having to rethink my designs for mobile late in the implementation progress also reminds me to return to the ‘mobile first’ mindset of web design for my next page. I ended up throwing out an implementation for a gallery because I wasn’t happy with its layout on a mobile page. If I had started on mobile first, I may have come up with a better implementation to start with which would have saved time. I also learned a valuable lesson in double checking the HTML when CSS isn’t working. I had forgotten on one page to add in the viewport meta tags, leaving me scratching my head for a long time as to why the CSS wasn’t working for responsiveness on that one page. 
 
 Images of original design vs outcome
+
 Front Page
 ![Image of Original Design](https://github.com/shane-ducksbury-uc/front-end-web/blob/main/reflection-images/original-home.png?raw=true)
 ![Image of New Design](https://github.com/shane-ducksbury-uc/front-end-web/blob/main/reflection-images/new-site.png?raw=true)
