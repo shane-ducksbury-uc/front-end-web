@@ -1,5 +1,5 @@
 @import 'reset.css';
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:ital,wght@0,300;0,400;0,600;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,300&display=swap&family=Poppins:ital,wght@0,300;0,400;0,600;1,400;1,600&display=swap');
 
 body {
     font-size: 16px;
@@ -43,8 +43,8 @@ header a {
 nav ul {
     display: flex;
     list-style: none;
-    align-items: center;
-    justify-content: center;
+    margin: 10px 0 0;
+    justify-content: space-between;
 }
 
 /* Underline for nav underline from https://tobiasahlin.com/blog/css-trick-animating-link-underlines/ */
@@ -124,6 +124,33 @@ ul {
 
 li {
     margin-bottom: 0.8rem;
+}
+
+.image-container {
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.image-container > p {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+.image-container > p > .copyright-information {
+    font-style: italic;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+main .image-container {
+    width: 80%;
 }
 
 .home-hero {
@@ -214,76 +241,6 @@ footer > .logo > a {
     /* background-position: -100% 0px; */
 }
 
-
-/* tab-gallery */
-.tab-info-gallery {
-    min-height: 1000px;
-    border-top: #ccc;
-    border-bottom: #ccc;
-    border-style: solid;
-    /* border-width: 1px; */
-    /* border: 1px solid #ccc; */
-}
-
-.tab-info-gallery h2{
-    text-align: center;
-}
-
-/* Style the tabs at the top of content */
-.tab {
-    margin: 0 auto;
-    margin-bottom: 2rem;
-    max-width: 80%;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  /* Style the buttons that are used to open the tab content */
-  /* Change background color of buttons on hover */
-.tab button {
-    background: transparent;
-    border: none;
-    margin: 30px auto 0;
-    display: block;
-    font-size: 1.2rem;
-    font-weight: 300;
-    outline: none;
-    position: relative;
-    z-index: -1;
-    transition: 0.3s;
-    padding: 10px;
-    cursor: pointer;
-  }
-  .tab button:before {
-    content: "";
-    border-bottom: 1px solid #000;
-    padding: 0 10px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    width: 0;
-    transition: 0.2s;
-  }
-  .tab button:hover:before {
-    width: 100%;
-    padding: 0;
-  }
-  .tab button.active {
-    font-weight: 600;
-  }
-
-  /* Style the tab content */
-  .tab-content {
-    display: none;
-    max-width: 80%;
-    margin: 0 auto;
-    padding: 6px 12px;
-    border-top: none;
-  }
-
 @media screen and (max-width: 1500px){
     main {
         width: 100%;
@@ -303,12 +260,19 @@ footer > .logo > a {
 
 
 @media screen and (max-width:1000px){
+
+    
     header {
         justify-content: space-between;
     }
-
-    header a, a:link, a:visited {
+    
+    nav > ul > li > a, a:link, a:visited {
         font-size: 1rem;
+    }
+    
+    .logo > a {
+        font-size: 2rem;
+        max-width: 100px;
     }
 
     /* Don't get the nav on the front page. Working in reverse of what I'm expecting for some reason */
@@ -485,10 +449,6 @@ footer > .logo > a {
 }
 
 @media screen and (max-width:750px){
-    .logo > a {
-        font-size: 2rem;
-        max-width: 100px;
-    }
 
     main p {
         margin: 0 1em;
@@ -496,10 +456,16 @@ footer > .logo > a {
 
     main h1, h2, h3, h4 {
         text-align: center;
+        line-height: 1.25em;
+        margin: 15px 0;
     }
 
     .home-hero > header {
         justify-content: center;
+    }
+
+    .home-hero > h1 {
+        font-size: 4rem;
     }
 
     #architect-hero {
