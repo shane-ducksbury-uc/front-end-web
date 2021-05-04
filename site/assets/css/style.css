@@ -133,7 +133,6 @@ li {
 
 .image-container {
     width: 200px;
-    /* height: auto; */
     margin: 0 auto;
     padding: 25px 0;
 }
@@ -153,7 +152,6 @@ figure > figcaption > .copyright-information {
 
 img {
     width: 100%;
-    /* height: auto; */
 }
 
 main .image-container {
