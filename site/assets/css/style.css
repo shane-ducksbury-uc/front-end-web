@@ -133,12 +133,13 @@ li {
 
 .image-container {
     width: 200px;
-    height: auto;
+    /* height: auto; */
     margin: 0 auto;
-    padding: 10px 0;
+    padding: 25px 0;
 }
 
-.image-container > p {
+figure > figcaption {
+    padding-top: 10px;
     font-family: 'Lato', sans-serif;
     font-size: 0.95rem;
     font-weight: 300;
@@ -146,13 +147,13 @@ li {
     margin: 0 auto;
 }
 
-.image-container > p > .copyright-information {
+figure > figcaption > .copyright-information {
     font-style: italic;
 }
 
 img {
     width: 100%;
-    height: auto;
+    /* height: auto; */
 }
 
 main .image-container {
@@ -249,7 +250,7 @@ footer > .logo > :is(a, a:link, a:visited) {
 
 #architect-hero {
     background-color: rgb(221, 221, 221);
-    background-image: linear-gradient(to left, #000000 40%, rgb(255,255,255,0)),url("../img/extra2-robin boyd portrait-copyright-Mark-Strizic.jpg");
+    background-image: linear-gradient(to left, #000000 40%, rgb(255,255,255,0)),url("../img/extra2-robin_boyd_portrait-copyright-Mark-Strizic.jpg");
     /* background-position: -100% 0px; */
 }
 

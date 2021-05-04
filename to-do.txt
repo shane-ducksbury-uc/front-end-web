@@ -1,3 +1,11 @@
-- Need to add em italics for headings
-- Need to finish off the footer
-- Add next and previous to the bottom of the articles.
+document titles
+reusable image box initial size
+caption - fig caption
+valid CSS
+Architect in two places 
+images in root folder
+
+Change images to figures
+Change image of him
+Possibly update the :(is)
+change name of img files
