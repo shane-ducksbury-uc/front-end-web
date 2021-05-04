@@ -151,7 +151,7 @@ img {
 }
 
 main .image-container {
-    width: 80%;
+    width: 100%;
 }
 
 .page-navigation-lower {
@@ -280,8 +280,6 @@ footer > .logo > :is(a, a:link, a:visited) {
 
 
 @media screen and (max-width:1000px){
-
-    
     header {
         justify-content: space-between;
     }
@@ -471,10 +469,14 @@ footer > .logo > :is(a, a:link, a:visited) {
         margin: 0 1em;
     }
 
-    main h1, h2, h3, h4 {
+    main :is(h1, h2, h3, h4) {
         text-align: center;
         line-height: 1.25em;
         margin: 15px 0;
+    }
+
+    main .image-container {
+        width: 90%;
     }
 
     .home-hero > header {
