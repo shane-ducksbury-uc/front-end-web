@@ -450,7 +450,7 @@ footer > .logo > :is(a, a:link, a:visited) {
     }
 
     #architect-hero {
-        background-image: linear-gradient(to top, #000000 10%, rgb(255,255,255,0)),url("../img/extra2-robin boyd portrait-copyright-Mark-Strizic.jpg");
+        background-image: linear-gradient(to top, #000000 10%, rgb(255,255,255,0)),url("../img/extra2-robin_boyd_portrait-copyright-Mark-Strizic.jpg");
         background-position: unset;
     }
 
@@ -491,7 +491,7 @@ footer > .logo > :is(a, a:link, a:visited) {
     }
 
     #architect-hero {
-        background-image: linear-gradient(to top, #000000 10%, rgb(255,255,255,0)),url("../img/extra2-robin boyd portrait-copyright-Mark-Strizic.jpg");
+        background-image: linear-gradient(to top, #000000 10%, rgb(255,255,255,0)),url("../img/extra2-robin_boyd_portrait-copyright-Mark-Strizic.jpg");
     }
 }
 
